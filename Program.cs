@@ -30,7 +30,6 @@ namespace RabbitMqSample
 
 
             //WORKIN WITH DIRECT EXCHANGE
-
             string exchangeDirect = "directexchange";
 
             string nomeFilaDirect1 = "fila3";
