@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  rabbit-mq:
+    image: rabbitmq:3-management-alpine
+    volumes:
+      - mq_data:/var/lib/rabbitmq/mnesia
+    ports:
+      - 15672:15672
+      - 5672:5672
+      - 4369:4369
+    environment: 
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+volumes: 
+  mq_data:
