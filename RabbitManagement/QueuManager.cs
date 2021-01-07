@@ -25,7 +25,9 @@ namespace RabbitManagement
             connection = connectionFactory.CreateConnection();
         }
 
-        public IConnection Connection { get => connection; }
+        public IConnection Connection { get => connectionFactory.CreateConnection(); }
+
+
 
         public void CreateExchangeFanout(string name, bool durable, IConnection connection)
         {
@@ -94,10 +96,41 @@ namespace RabbitManagement
             }
         }
 
-        private void Consumer_Received(object sender, BasicDeliverEventArgs e)
+        public EventingBasicConsumer CreateConsumer(IModel model)
         {
-            throw new NotImplementedException();
+            return new EventingBasicConsumer(model);
         }
+
+        //private EventingBasicConsumer CreateConsumer(string queueName, bool durable, bool exclusive, bool autoDelete, Dictionary<string, object> arguments)
+        //{
+        //    EventingBasicConsumer consumer;
+
+        //    using (var connection = connectionFactory.CreateConnection())
+        //    using (var channel = connection.CreateModel())
+        //    {
+        //        channel.QueueDeclare(queue: queueName,
+        //                             durable: true,
+        //                             exclusive: false,
+        //                             autoDelete: false,
+        //                             arguments: null);
+
+        //        consumer = new EventingBasicConsumer(channel);
+
+        //        //consumer.Received += (model, ea) =>
+        //        //{
+        //        //    var body = ea.Body.ToArray();
+        //        //    var message = Encoding.UTF8.GetString(body);
+        //        //    Console.WriteLine(" [x] Received {0}", message);
+        //        //    channel.BasicNack(ea.DeliveryTag, false, false);
+        //        //};
+
+        //        channel.BasicQos(0, 1, false);
+
+        //        channel.BasicConsume(queue: queueName,
+        //                             autoAck: false,
+        //                             consumer: consumer);
+        //    }
+        //}
 
         public void Dispose()
         {
