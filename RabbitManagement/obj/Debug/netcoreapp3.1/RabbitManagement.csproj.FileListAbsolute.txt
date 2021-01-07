@@ -1,0 +1,9 @@
+D:\Projetos\Estudos\RabbitManagement\bin\Debug\netcoreapp3.1\RabbitManagement.deps.json
+D:\Projetos\Estudos\RabbitManagement\bin\Debug\netcoreapp3.1\RabbitManagement.dll
+D:\Projetos\Estudos\RabbitManagement\bin\Debug\netcoreapp3.1\RabbitManagement.pdb
+D:\Projetos\Estudos\RabbitManagement\obj\Debug\netcoreapp3.1\RabbitManagement.csprojAssemblyReference.cache
+D:\Projetos\Estudos\RabbitManagement\obj\Debug\netcoreapp3.1\RabbitManagement.AssemblyInfoInputs.cache
+D:\Projetos\Estudos\RabbitManagement\obj\Debug\netcoreapp3.1\RabbitManagement.AssemblyInfo.cs
+D:\Projetos\Estudos\RabbitManagement\obj\Debug\netcoreapp3.1\RabbitManagement.csproj.CoreCompileInputs.cache
+D:\Projetos\Estudos\RabbitManagement\obj\Debug\netcoreapp3.1\RabbitManagement.dll
+D:\Projetos\Estudos\RabbitManagement\obj\Debug\netcoreapp3.1\RabbitManagement.pdb
